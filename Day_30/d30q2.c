@@ -4,7 +4,7 @@
 int main() {
 
     int num,p = 0,n = 0,z = 0;
-    printf("Enter the number of elements: ");
+    printf("Enter the size of array: ");
     scanf("%d",&num);
     int arr[num];
 
@@ -24,4 +24,5 @@ int main() {
      printf("Zero = %d\n", z);
 
    return 0;
+
 }
