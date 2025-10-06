@@ -1,32 +1,24 @@
-//Reverse an array without taking extra space.
+//Search for an element in an array using linear search.
 
 #include <stdio.h>
-
 int main() {
-    int n;
-    printf("Enter the size of array: ");
-    scanf("%d", &n);
 
-    int arr[n];
-    printf("Enter %d elements:\n", n);
-    for(int i = 0; i < n; i++) {
-        scanf("%d", &arr[i]);
-    }
+  int num,n;
+  
+  printf("Enter the size of array: ");
+  scanf("%d",&n);
+  int arr[n];
 
-    // Reverse in-place using two pointers
-    int start = 0, end = n - 1, temp;
-    while(start < end) {
-        temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
-        start++;
-        end--;
-    }
+for(int i = 0;i < n;i++){
+ scanf("%d", &arr[i]);
+}
+printf("Enter the number to be searched: ");
+scanf("%d",&num);
 
-    printf("Reversed array:\n");
-    for(int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
-    }
+for(int i = 0;i < n;i++){
+    if(arr[i] == num)
+    printf("Found at index: %d", i);
+}
+return 0;
 
-    return 0;
 }
